@@ -162,6 +162,16 @@ var (
 	ch_CompileSocialCard = sch.NewSmartChan(channel_buffer_size) // TODO: implement the ch_CompileSocialCard channel
 
 	ch_Done = make(chan struct{}, 1)
+
+	valid_langs = []string{
+		"amh", "ara", "asm", "aze", "bel", "ben", "bod", "bos", "bre", "bul", "cat", "ceb", "ces",
+		"chr", "cos", "cym", "dan", "deu", "div", "dzo", "ell", "eng", "epo", "est", "eus", "fas",
+		"fin", "fra", "fry", "gla", "gle", "glg", "grc", "guj", "hat", "heb", "hin", "hrv", "hun",
+		"hye", "iku", "ind", "isl", "ita", "jav", "jpn", "kan", "kat", "kaz", "khm", "kir", "kor",
+		"kur", "lao", "lat", "lav", "lit", "ltz", "mal", "mar", "mkd", "mlt", "mon", "mri", "msa",
+		"mya", "nep", "nld", "nor", "oci", "ori", "pan", "pol", "por", "pus", "ron", "rus", "san",
+		"sin", "slk", "slv", "snd", "spa", "sqi", "srp", "sun", "swa", "swe", "tam", "tat", "tel",
+	}
 )
 
 type Document struct {
