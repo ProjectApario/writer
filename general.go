@@ -59,3 +59,15 @@ func terminatePID(pid int) {
 		fmt.Println("Error terminating PID", pid, ":", err)
 	}
 }
+
+func sliceContains[T comparable](slice []T, item T) bool {
+	if slice == nil {
+		return false
+	}
+	for _, s := range slice {
+		if s == item {
+			return true
+		}
+	}
+	return false
+}
