@@ -1,4 +1,4 @@
-FROM golang:1.20.4-buster
+FROM golang:1.20.4-bullseye
 LABEL version="v0.0.1"
 LABEL description="runtime container for apario-writer dependency satisifaction"
 WORKDIR /app
