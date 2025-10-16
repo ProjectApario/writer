@@ -434,7 +434,12 @@ func performOcrOnPdf(ctx context.Context, pp PendingPage) {
 		}
 		src := pp.PNG.Light.Original
 		dest := strings.TrimSuffix(pp.OCRTextPath, `.txt`)
-		cmd := exec.Command(m_required_binaries["tesseract"], src, dest, `-l`, `eng`, `--psm`, `1`)
+		lang := *flag_s_language
+		if !sliceContains(valid_langs, lang) {
+			log_error.Println("cannot use " + lang + " as the tesseract ocr language, using eng instead")
+			lang = "eng"
+		}
+		cmd := exec.Command(m_required_binaries["tesseract"], src, dest, `-l`, lang, `--psm`, `1`)
 		var cmd_stdout bytes.Buffer
 		var cmd_stderr bytes.Buffer
 		cmd.Stdout = &cmd_stdout
