@@ -24,6 +24,9 @@ var (
 	// Antivirus
 	flag_b_disable_clamav = config.NewBool("no-clam", false, "disable clamav antivirus scanning of downloaded files")
 
+	// Language support
+	flag_s_language = config.NewString("language", "eng", "language to use for tesseract ocr")
+
 	// Single PDF ingestion options
 	flag_s_pdf_title        = config.NewString("pdf-title", "", "title of the document")
 	flag_s_metadata_columns = config.NewString("csv-metadata-columns", "", "comma separated value of header values that represent metadata ; saved as key => value where key is the column header")
