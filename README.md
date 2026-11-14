@@ -1,5 +1,8 @@
 # Apario Writer
 
+![Unique](https://counthis.app/github?repo=projectapario/writer&label=Unique)
+![Impressions](https://counthis.app/github?user=projectapario&label=Impressions)
+
 This package is intended to become a replacement utility to the Apario Contribution
 project that most of this code is taken from and built onto. That first iteration 
 was necessary because it was specifically designed to ingest the JFK Files from the
